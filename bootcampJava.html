@@ -1,0 +1,172 @@
+<h1>☕ Java Pro Bootcamp: 5-Week Intensive Track</h1>
+<p><strong>Target Audience:</strong> CS Grads / Developers with prior experience.
+<strong>Goal:</strong> Production-ready Java skills, including concurrency, data structures, and build tools.</p>
+<h2>📚 Reference Material</h2>
+<ul>
+<li><strong>Lectures:</strong> <a href="https://www.udemy.com/course/java-programming-tutorial-for-beginners/">Udemy: Java Programming Tutorial</a></li>
+<li><strong>Practice:</strong> <a href="https://app.datacamp.com/learn/skill-tracks?topics=35">DataCamp: Java Skill Track</a></li>
+<li><strong>Deep Dive:</strong> <a href="https://subscription.packtpub.com/video/programming/9781788994576/p1">Packt: Java Programming</a></li>
+</ul>
+<hr />
+<h2>🗓️ Week 1: The Deep Dive (Syntax &amp; Memory)</h2>
+<p><em>Goal: Move beyond "it works" to "how it works in memory."</em></p>
+<h3>Day 1: The JVM, Primitives &amp; Wrappers</h3>
+<p><strong>Concepts:</strong> JVM vs JRE vs JDK, Bytecode, Primitives vs Wrapper Classes (Autoboxing/Unboxing), String Pool vs Heap.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Memory Test:</strong> Write code that demonstrates <code>String s1 = "Hello"; String s2 = "Hello";</code> are the same reference, but <code>String s3 = new String("Hello");</code> is different. Print their identity hash codes.
+    2.  <strong>Overflow:</strong> Write a loop that continuously adds <code>1</code> to a <code>byte</code> variable. Print the value at every step to observe and explain the overflow wrapping behavior.</p>
+<h3>Day 2: Control Flow &amp; Algorithmic Logic</h3>
+<p><strong>Concepts:</strong> <code>switch</code> expressions (modern Java), ternary operators, <code>break/continue</code> with labels.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Diamond Printer:</strong> Write a program that takes an odd integer <code>n</code> (e.g., 7) and prints a perfect diamond shape of asterisks of width <code>n</code> using nested loops.
+    2.  <strong>Prime Sieve:</strong> Implement the "Sieve of Eratosthenes" to find all prime numbers up to 1000. Do not use a brute-force nested loop check.</p>
+<h3>Day 3: Arrays &amp; Multi-Dimensional Logic</h3>
+<p><strong>Concepts:</strong> Jagged arrays, Array copying (<code>System.arraycopy</code> vs <code>.clone()</code>), Varargs.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Matrix Multiplication:</strong> Create two 3x3 integer matrices. Write a function to multiply them. (Must handle the row/column logic correctly).
+    2.  <strong>Spiral Traversal:</strong> Write a program that accepts a size <code>N</code> and fills an <code>NxN</code> 2D array with numbers 1 to <code>N*N</code> in a spiral pattern (clockwise from top-left).</p>
+<h3>Day 4: Deep Dive into Methods &amp; Recursion</h3>
+<p><strong>Concepts:</strong> Stack Overflow, Pass-by-Value (references), Recursive thinking.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Recursive Palindrome:</strong> Write a recursive method <code>boolean isPalindrome(String s)</code> that checks a string without using loops.
+    2.  <strong>Custom Fibonacci:</strong> Write a recursive function to find the Nth Fibonacci number, but optimize it using <strong>Memoization</strong> (store previously calculated values in a static array/map to speed it up).</p>
+<h3>Day 5: Strings &amp; Regular Expressions (Regex)</h3>
+<p><strong>Concepts:</strong> <code>StringBuilder</code> (Mutable) vs <code>String</code> (Immutable), Regex Pattern Matching.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Email Validator:</strong> Write a regex pattern that validates strictly formatted email addresses (must contain @, domain, extension). Test it against a list of 10 valid and 10 invalid emails.
+    2.  <strong>Text Scrubber:</strong> Take a chaotic string <code>"H3ll0 W0rld! Th1s is J4v4."</code>. Use Regex to replace all numbers with <code>*</code> and remove all punctuation.</p>
+<hr />
+<h3>☠️ Week 1 Friday Challenge: "The Cryptographer"</h3>
+<p><strong>Goal:</strong> Bitwise manipulation and logic.
+* <strong>Task:</strong> Create a class <code>Enigma</code>.
+* <strong>Requirements:</strong>
+    1.  Implement <code>encrypt(String message, int key)</code>: Shift every character's ASCII value by the key.
+    2.  Implement <code>decrypt(String cipher, int key)</code>: Reverse the process.
+    3.  <strong>Hard Mode:</strong> Instead of basic addition, use the <strong>XOR (<code>^</code>) operator</strong> for encryption/decryption.
+    4.  Write a main method that proves <code>decrypt(encrypt(msg, key), key)</code> returns the original message.</p>
+<hr />
+<h2>🗓️ Week 2: OOP &amp; Architectural Thinking</h2>
+<h3>Day 6: Classes, Statics &amp; The "Singleton" Pattern</h3>
+<p><strong>Concepts:</strong> <code>static</code> context, Instance control, Singleton Design Pattern.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Singleton Config:</strong> Create a class <code>AppConfig</code> that <em>cannot</em> be instantiated with <code>new</code>. It must provide a <code>getInstance()</code> static method that returns the <em>same</em> object every time.
+    2.  <strong>Object Counter:</strong> Create a class where every time an instance is created, a static counter increments. Print the count from the main method without referencing any specific instance.</p>
+<h3>Day 7: Inheritance &amp; Polymorphism (The Right Way)</h3>
+<p><strong>Concepts:</strong> <code>super</code>, Method Overriding, Covariant Return Types, <code>final</code> classes/methods.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Shape Factory:</strong> Create a parent <code>Shape</code> and children <code>Circle</code>, <code>Square</code>. Use an array <code>Shape[]</code> to hold mixed objects. Loop through and calculate the total area of all shapes without checking <code>instanceof</code>.
+    2.  <strong>Immutable Class:</strong> Create a strictly immutable class <code>Employee</code> (all fields <code>final</code> and <code>private</code>, no setters, constructor sets all data).</p>
+<h3>Day 8: Interfaces vs Abstract Classes</h3>
+<p><strong>Concepts:</strong> Interface Default Methods (Java 8), Functional Interfaces, Multiple Inheritance issues.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Plug-in System:</strong> Define an interface <code>Plugin</code> with <code>execute()</code>. Create a class <code>CoreSystem</code> that accepts an array of <code>Plugin</code> objects. Create anonymous inner classes implementing <code>Plugin</code> and run them.
+    2.  <strong>Multiple Interfaces:</strong> Create a class <code>SmartPhone</code> that implements <code>Camera</code>, <code>MusicPlayer</code>, and <code>Phone</code>. Resolve any method name conflicts if the interfaces have methods with the same name.</p>
+<h3>Day 9: Composition over Inheritance</h3>
+<p><strong>Concepts:</strong> "Has-a" vs "Is-a" relationships, Dependency Injection basics.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>PC Builder:</strong> Create a <code>Computer</code> class. Instead of extending <code>Processor</code>, the <code>Computer</code> should <em>have</em> a <code>Processor</code>, <em>have</em> a <code>Ram</code>, and <em>have</em> a <code>Storage</code>.
+    2.  <strong>Swap Parts:</strong> Write a method in <code>Computer</code> to upgrade the RAM (replace the <code>Ram</code> object with a new one with higher capacity).</p>
+<h3>Day 10: Enums &amp; Complex State</h3>
+<p><strong>Concepts:</strong> Enums with fields, constructors, and abstract methods.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Advanced Enum:</strong> Create an enum <code>Operation</code> { ADD, SUBTRACT, MULTIPLY }. Add an abstract method <code>double apply(double x, double y)</code> to the enum. Implement the logic <em>inside</em> each constant.
+    2.  <strong>State Machine:</strong> Use an Enum to represent the state of an Order (NEW, PROCESSING, SHIPPED, DELIVERED). Write logic that prevents invalid transitions (e.g., cannot go from NEW directly to DELIVERED).</p>
+<hr />
+<h3>☠️ Week 2 Friday Challenge: "The RPG Battle System"</h3>
+<p><strong>Goal:</strong> heavy OOP usage, Polymorphism, and State management.
+* <strong>Task:</strong> Build a text-based battle arena.
+* <strong>Requirements:</strong>
+    1.  Abstract class <code>Character</code> with <code>health</code>, <code>strength</code>, <code>attack()</code>.
+    2.  Subclasses: <code>Warrior</code> (high health), <code>Mage</code> (low health, high damage), <code>Rogue</code> (chance to dodge).
+    3.  <strong>Logic:</strong> The <code>attack()</code> method should calculate damage based on strength and randomness.
+    4.  <strong>Arena:</strong> Loop a battle between two characters until one's health drops to 0.
+    5.  <strong>Polymorphism:</strong> The main code calls <code>p1.attack(p2)</code>—it shouldn't care if p1 is a Mage or Warrior.</p>
+<hr />
+<h2>🗓️ Week 3: Advanced Data &amp; Exceptions</h2>
+<h3>Day 11: Collections Deep Dive (Performance)</h3>
+<p><strong>Concepts:</strong> <code>ArrayList</code> vs <code>LinkedList</code> (Big O), <code>HashMap</code> internal workings (Buckets/HashCode).
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Performance Test:</strong> Insert 1 million integers into an <code>ArrayList</code> and a <code>LinkedList</code>. Measure and print the time taken to <code>get()</code> the middle element for both. Explain the difference.
+    2.  <strong>Custom Key:</strong> Create a class <code>Person</code>. Use it as a Key in a <code>HashMap</code>. Demonstrate what goes wrong if you override <code>equals()</code> but NOT <code>hashCode()</code>.</p>
+<h3>Day 12: Generics &amp; Wildcards</h3>
+<p><strong>Concepts:</strong> Bounded Type Parameters (<code>&lt;T extends Number&gt;</code>), Wildcards (<code>? super Integer</code>).
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Generic Stack:</strong> Implement your own <code>MyStack&lt;T&gt;</code> class using an array internally. Handle the resizing of the array when it gets full.
+    2.  <strong>Wildcard Sum:</strong> Write a method <code>sumList(List&lt;? extends Number&gt; list)</code> that can accept a <code>List&lt;Integer&gt;</code> OR a <code>List&lt;Double&gt;</code> and return the total sum.</p>
+<h3>Day 13: Exception Handling Patterns</h3>
+<p><strong>Concepts:</strong> Try-with-resources, Multi-catch, Stack Traces, Checked vs Unchecked.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Auto-Closeable:</strong> Create a class <code>Resource</code> that implements <code>AutoCloseable</code>. Use it in a try-with-resources block to prove the <code>close()</code> method runs automatically even if an exception occurs.
+    2.  <strong>Rethrowing:</strong> Catch a standard exception (e.g., <code>IOException</code>) and rethrow it as a custom RuntimeException (<code>DataProcessingException</code>) to hide implementation details.</p>
+<h3>Day 14: Java 8 Streams &amp; Lambdas</h3>
+<p><strong>Concepts:</strong> Functional Interfaces (<code>Predicate</code>, <code>Consumer</code>, <code>Function</code>), Stream pipelines, Lazy evaluation.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Stream Statistics:</strong> Given a list of 100 random integers: use Streams to find the Max, Min, Average, and Sum in a single pass (using <code>IntSummaryStatistics</code>).
+    2.  <strong>Grouping:</strong> Given a list of <code>Employee</code> objects, use <code>Collectors.groupingBy</code> to create a <code>Map&lt;Department, List&lt;Employee&gt;&gt;</code>.</p>
+<h3>Day 15: File I/O &amp; Serialization</h3>
+<p><strong>Concepts:</strong> <code>NIO.2</code> (Files, Paths), <code>Serializable</code>.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Directory Walker:</strong> Write a program that recursively lists every file in a given folder (and subfolders) and prints their file size.
+    2.  <strong>Object Serialization:</strong> Save the RPG Character object from Week 2 into a <code>.dat</code> file. Write a separate program to load it back into memory to "resume" the game.</p>
+<hr />
+<h3>☠️ Week 3 Friday Challenge: "Log File Analyzer"</h3>
+<p><strong>Goal:</strong> Streams, IO, and String manipulation.
+* <strong>Task:</strong> Parse a massive server log file.
+* <strong>Requirements:</strong>
+    1.  Generate a dummy log file with 10,000 lines: <code>[IP_ADDRESS] [TIMESTAMP] [STATUS_CODE] [URL]</code>
+    2.  <strong>Analysis:</strong>
+        * Count total requests per IP address.
+        * Find the Top 3 most requested URLs.
+        * Calculate the percentage of "404 Error" responses.
+    3.  <strong>Constraint:</strong> Use Java Streams for the analytics.</p>
+<hr />
+<h2>🗓️ Week 4: The "Pro" Stack (Concurrency &amp; Tooling)</h2>
+<h3>Day 16: Basic Concurrency (Threads)</h3>
+<p><strong>Concepts:</strong> <code>Thread</code> vs <code>Runnable</code>, Thread Lifecycle, <code>join()</code>, <code>sleep()</code>.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Race Condition:</strong> Create a shared counter variable. Launch 10 threads that each increment it 1000 times. Print the final result. (It will likely be wrong).
+    2.  <strong>The Fix:</strong> Fix the above using the <code>synchronized</code> keyword or <code>AtomicInteger</code>.</p>
+<h3>Day 17: Advanced Concurrency (Executors)</h3>
+<p><strong>Concepts:</strong> Thread Pools (<code>ExecutorService</code>), <code>Callable</code>, <code>Future</code>.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Thread Pool:</strong> Create a "Fixed Thread Pool" of size 3. Submit 10 tasks that each take 1 second to run. Observe how they queue up and execute in batches.
+    2.  <strong>Future Result:</strong> Submit a calculation task to an Executor. Do other work in the main thread. Then use <code>future.get()</code> to retrieve the result, handling the timeout if it takes too long.</p>
+<h3>Day 18: Build Tools &amp; Dependency Management</h3>
+<p><strong>Concepts:</strong> Maven/Gradle structure, <code>pom.xml</code>, Dependencies.
+* <strong>Action:</strong>
+    1.  <strong>Mavenize:</strong> Take your Week 2 RPG project. Convert it into a Standard Maven Project structure (<code>src/main/java</code>).
+    2.  <strong>External Lib:</strong> Add the <code>Gson</code> or <code>Jackson</code> dependency to <code>pom.xml</code>. Use it to convert your objects to JSON strings.</p>
+<h3>Day 19: Unit Testing (JUnit 5)</h3>
+<p><strong>Concepts:</strong> <code>@Test</code>, <code>@BeforeEach</code>, Assertions, Mocking concepts.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Test the RPG:</strong> Write JUnit tests for your <code>Warrior</code> class. Ensure health doesn't drop below 0.
+    2.  <strong>Edge Cases:</strong> Write a test for your "Division" method to ensure it throws the correct exception when dividing by zero using <code>assertThrows</code>.</p>
+<h3>Day 20: Database Basics (JDBC)</h3>
+<p><strong>Concepts:</strong> JDBC Driver, <code>Connection</code>, <code>PreparedStatement</code>, SQL Injection prevention.
+* <strong>Intense Exercises:</strong>
+    1.  <strong>Connect:</strong> Connect to a local SQLite or H2 database.
+    2.  <strong>CRUD:</strong> Write a Java program that Creates a table <code>Users</code>, Inserts a user, and Selects them back using <code>PreparedStatement</code>.</p>
+<hr />
+<h3>☠️ Week 4 Friday Challenge: "Multi-threaded Bank"</h3>
+<p><strong>Goal:</strong> Handling concurrency and locking safely.
+* <strong>Task:</strong> Simulate a bank with 100 accounts.
+* <strong>Requirements:</strong>
+    1.  Create 100 <code>Account</code> objects with $1000 each.
+    2.  Create a "TransactionEngine" that spins up 20 threads.
+    3.  Each thread randomly picks two accounts and transfers a random amount.
+    4.  <strong>Critical:</strong> You must ensure no money is created or lost. The total money in the bank must remain exactly $100,000 at the end.
+    5.  Use <code>synchronized</code> blocks or <code>ReentrantLock</code> to prevent race conditions.</p>
+<hr />
+<h2>🗓️ Week 5: Capstone Project (Can this be done in Week 4 itself?)</h2>
+<p><em>Choose ONE of the following to build over 5 days.</em></p>
+<h3>Option A: The "Console E-Commerce Store"</h3>
+<ul>
+<li><strong>Features:</strong> User login (File I/O), Product Catalog (Collections), Cart Management, Checkout (Interface simulation), Order History (JSON/File storage).</li>
+<li><strong>Requirement:</strong> Must use Maven, JUnit Tests (at least 5), and proper OOP design.</li>
+</ul>
+<h3>Option B: The "Chat Server" (Networking)</h3>
+<ul>
+<li><strong>Features:</strong> A Server that listens on a port. Multiple Clients can connect (using Threads).</li>
+<li><strong>Function:</strong> When Client A types a message, Client B and C see it.</li>
+<li><strong>Requirement:</strong> Use <code>java.net.Socket</code> and <code>ServerSocket</code>. Handle client disconnections gracefully.</li>
+</ul>

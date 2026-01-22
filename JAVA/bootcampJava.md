@@ -13,8 +13,110 @@
 ## 🗓️ Week 1: The Deep Dive (Syntax & Memory)
 *Goal: Move beyond "it works" to "how it works in memory."*
 
-### Day 1: The JVM, Primitives & Wrappers
-**Concepts:** JVM vs JRE vs JDK, Bytecode, Primitives vs Wrapper Classes (Autoboxing/Unboxing), String Pool vs Heap.
+# Day 1: The JVM, Primitives & Wrappers
+
+**Concepts Covered:**  
+JVM vs JRE vs JDK, Bytecode, Primitives vs Wrapper Classes (Autoboxing/Unboxing), String Pool vs Heap
+
+---
+
+## 1. Java Platform Overview (Java 17 LTS)
+
+- JVM vs JRE vs JDK  
+- Role of the Java compiler (`javac`)  
+- Bytecode and platform independence  
+- Interpreter vs Just-In-Time (JIT) compilation  
+- HotSpot JVM architecture  
+- Tiered compilation  
+
+---
+
+## 2. Class Loading & Initialization Lifecycle
+
+- Class loading phases:
+  - Loading
+  - Linking
+  - Initialization
+- Class loaders:
+  - Bootstrap
+  - Platform
+  - Application
+- When a class is loaded vs initialized  
+- Static variables and static blocks execution order  
+- Parent–child class loading delegation model  
+
+---
+
+## 3. JVM Memory Areas
+
+- Metaspace (class metadata, constant pool)  
+- Runtime Constant Pool  
+- Heap memory:
+  - Young Generation
+  - Old Generation
+- Stack memory and stack frames  
+- Program Counter Register  
+- Native Method Stack (JNI overview)  
+
+---
+
+## 4. Garbage Collection – Conceptual Overview
+
+- Automatic memory management  
+- Object eligibility vs object deletion  
+- Non-deterministic nature of garbage collection  
+- `System.gc()` as a suggestion, not a command  
+- Why memory leaks are still possible  
+
+---
+
+## 5. JVM Tooling Awareness
+
+- `javap` – bytecode inspection  
+- `jcmd` – JVM diagnostics  
+- `jstack` – thread dump analysis  
+- `jmap` – heap and memory insights  
+
+---
+
+## 6. Primitive Data Types
+
+- Primitive sizes and ranges  
+- Two’s complement representation  
+- Numeric promotion rules  
+- Overflow and underflow behavior  
+
+---
+
+## 7. Wrapper Classes
+
+- Primitive wrapper classes  
+- Immutability of wrapper objects  
+- Autoboxing and unboxing  
+- Integer cache (`-128` to `127`)  
+- Reference comparison vs value comparison  
+
+---
+
+## 8. Equality & Hashing Fundamentals
+
+- `==` vs `.equals()`  
+- Default behavior of `Object.equals()`  
+- Purpose of `hashCode()`  
+- Contract between `equals()` and `hashCode()`  
+- Impact on hash-based data structures  
+
+---
+
+## 9. Immutability as a Design Principle
+
+- What makes an object immutable  
+- Why `String` and wrapper classes are immutable  
+- Thread-safety benefits  
+- Defensive copying  
+- Common immutability pitfalls  
+
+---
 * **Intense Exercises:**
     1.  **Memory Test:** Write code that demonstrates `String s1 = "Hello"; String s2 = "Hello";` are the same reference, but `String s3 = new String("Hello");` is different. Print their identity hash codes.
     2.  **Overflow:** Write a loop that continuously adds `1` to a `byte` variable. Print the value at every step to observe and explain the overflow wrapping behavior.

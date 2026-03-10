@@ -283,3 +283,4 @@
 ## Resources
 *   [Intro to SQL](https://scrimba.com/intro-to-sql-c0aviq0aha)
 *   [Learn Python](https://scrimba.com/learn-python-c03)
+*   [Certification for all Data Engineering related Courses](https://advancedsqlpuzzles.com/2022/11/18/database-certification-list/)

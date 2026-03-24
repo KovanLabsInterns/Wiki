@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>High-Performance Log Aggregation System - Requirements</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+    h1, h2, h3 { color: #2c3e50; }
+    code { background: #f4f4f4; padding: 4px; }
+    pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+
+<h1>High-Performance Log Aggregation System</h1>
+
+<h2>1. Objective</h2>
+<p>
+Design and implement a scalable, high-performance log aggregation system capable of collecting,
+processing, storing, and analyzing logs from multiple distributed services in real-time.
+</p>
+
+<h2>2. Functional Requirements</h2>
+
+<h3>2.1 Log Ingestion</h3>
+<ul>
+  <li>Accept logs via REST API and/or agents</li>
+  <li>Support batch log ingestion</li>
+  <li>Handle structured (JSON) and unstructured logs</li>
+</ul>
+
+<h3>2.2 Log Processing</h3>
+<ul>
+  <li>Parse logs into structured format</li>
+  <li>Enrich logs (timestamp normalization, service tagging)</li>
+  <li>Filter logs based on level (INFO, ERROR, DEBUG)</li>
+</ul>
+
+<h3>2.3 Storage</h3>
+<ul>
+  <li>Store logs in a scalable datastore</li>
+  <li>Support time-based partitioning</li>
+  <li>Enable log retention policies</li>
+</ul>
+
+<h3>2.4 Search & Query</h3>
+<ul>
+  <li>Search logs by time range, service, level</li>
+  <li>Full-text search support</li>
+  <li>Pagination and sorting</li>
+</ul>
+
+<h3>2.5 Visualization</h3>
+<ul>
+  <li>Dashboard for viewing logs</li>
+  <li>Real-time streaming of logs</li>
+  <li>Charts for metrics (error rate, latency)</li>
+</ul>
+
+<h3>2.6 Alerting</h3>
+<ul>
+  <li>Configure alert rules</li>
+  <li>Trigger alerts on thresholds</li>
+</ul>
+
+<h2>3. Non-Functional Requirements</h2>
+
+<h3>3.1 Performance</h3>
+<ul>
+  <li>Support high throughput (100k+ logs/sec)</li>
+  <li>Low latency ingestion</li>
+</ul>
+
+<h3>3.2 Scalability</h3>
+<ul>
+  <li>Horizontal scaling support</li>
+  <li>Distributed processing</li>
+</ul>
+
+<h3>3.3 Reliability</h3>
+<ul>
+  <li>Fault tolerance</li>
+  <li>No data loss</li>
+</ul>
+
+<h3>3.4 Security</h3>
+<ul>
+  <li>Authentication and authorization</li>
+  <li>Secure data transmission (HTTPS)</li>
+</ul>
+
+<h2>4. Log Format</h2>
+<pre>
+{
+  "timestamp": "2026-03-24T10:00:00",
+  "service": "payment-service",
+  "level": "ERROR",
+  "message": "Payment failed",
+  "traceId": "abc123",
+  "userId": "u789",
+  "endpoint": "/pay",
+  "responseTime": 1200,
+  "statusCode": 500
+}
+</pre>
+
+<h2>5. System Components</h2>
+<ul>
+  <li>Log Producer (Agent)</li>
+  <li>Ingestion Service</li>
+  <li>Message Queue (Kafka)</li>
+  <li>Stream Processor</li>
+  <li>Storage (Elasticsearch/ClickHouse)</li>
+  <li>Query API</li>
+  <li>UI Dashboard</li>
+</ul>
+
+<h2>6. Metrics to be Derived</h2>
+<ul>
+  <li>Error rate</li>
+  <li>Average response time</li>
+  <li>Throughput</li>
+  <li>P95 latency</li>
+</ul>
+
+<h2>7. Advanced Features</h2>
+<ul>
+  <li>Distributed tracing</li>
+  <li>AI-based log insights</li>
+  <li>Anomaly detection</li>
+  <li>Multi-tenant support</li>
+</ul>
+
+<h2>8. APIs</h2>
+
+<h3>8.1 Ingestion API</h3>
+<pre>
+POST /logs
+</pre>
+
+<h3>8.2 Search API</h3>
+<pre>
+GET /logs?service=payment&level=ERROR
+</pre>
+
+<h2>9. Constraints</h2>
+<ul>
+  <li>System should handle burst traffic</li>
+  <li>Logs must be retained based on policy</li>
+</ul>
+
+<h2>10. Future Enhancements</h2>
+<ul>
+  <li>Machine learning-based anomaly detection</li>
+  <li>Auto-scaling based on load</li>
+</ul>
+
+</body>
+</html>
